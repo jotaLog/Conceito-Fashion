@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CONCEITO FASHION</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo" aria-label="Voltar para a home">CONCEITO FASHION</a>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Menu principal">
+        <a class="nav-link" href="#novidades">Novidades</a>
+        <a class="nav-link" href="roupas.html" target="_blank" rel="noopener">Roupas</a>
+        <a class="nav-link" href="sapatos.html" target="_blank" rel="noopener">Sapatos</a>
+        <a class="nav-link" href="moletom.html" target="_blank" rel="noopener">Moletom</a>
+        <a class="nav-link" href="#sale">Sale</a>
+      </nav>
+
+      <a class="cart-btn" href="../../pages/carrinho.html" target="_blank" rel="noopener">
+        <span class="cart-count" aria-hidden="true">2</span>
+        🛒
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">Nova Coleção</h1>
+        <p class="hero-sub">Inverno 2025</p>
+        <a class="btn-primary" href="#novidades">Explorar Agora</a>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+    </section>
+
+    <section id="novidades" class="section categorias" aria-labelledby="novidades-h">
+      <div class="container">
+        <h2 id="novidades-h" class="section-title">Explore por Categoria</h2>
+        <p class="muted">Descubra os melhores looks para cada ocasião</p>
+
+        <div class="cards categories-grid">
+          <article class="category-card" tabindex="0">
+            <div class="category-media" role="img" aria-label="Imagem Elegância Casual"></div>
+            <h3>Elegância Casual</h3>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="category-media" role="img" aria-label="Imagem Acessórios"></div>
+            <h3>Acessórios</h3>
+          </article>
+
+          <article class="category-card" tabindex="0">
+            <div class="category-media" role="img" aria-label="Imagem Minimalista"></div>
+            <h3>Minimalista</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section destaques" aria-labelledby="destaques-h">
+      <div class="container">
+        <h2 id="destaques-h" class="section-title">Destaques da Semana</h2>
+        <p class="muted">Peças selecionadas especialmente para você</p>
+
+        <!-- Cards de roupas renderizados aqui -->
+        <div id="listaRoupas"></div>
+
+        <div class="center">
+          <a class="btn-ghost" href="roupas.html" target="_blank" rel="noopener">Ver todos os produtos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sale" class="section sale">
+      <div class="container">
+        <h2 class="section-title">Sale de Inverno</h2>
+        <p class="muted">Até 50% de desconto em peças selecionadas</p>
+        <a class="btn-outline" href="#novidades">Aproveitar Agora</a>
+      </div>
+    </section>
+
+    <section class="section newsletter">
+      <div class="container narrow">
+        <h3>Fique por dentro</h3>
+        <p class="muted">Receba novidades, ofertas exclusivas e lançamentos direto no seu e-mail</p>
+
+        <form class="newsletter-form" action="#" onsubmit="event.preventDefault()">
+          <input type="email" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail" required>
+          <button class="btn-primary">Inscrever</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>CONCEITO FASHION</h4>
+          <p class="muted">Moda contemporânea e atemporal para mulheres que valorizam estilo e qualidade.</p>
+        </div>
+
+        <div>
+          <h5>Comprar</h5>
+          <ul class="footer-list">
+            <li><a href="#novidades">Novidades</a></li>
+            <li><a href="roupas.html" target="_blank" rel="noopener">Roupas</a></li>
+            <li><a href="sapatos.html" target="_blank" rel="noopener">Sapatos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Atendimento</h5>
+          <ul class="footer-list">
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Envios</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container small center muted">© 2025 CONCEITO FASHION — Todos os direitos reservados.</div>
+    </footer>
+  </main>
+
+  <script src="../scripts/index.js"></script>
+</body>
+</html>
