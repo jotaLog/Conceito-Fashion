@@ -9,9 +9,8 @@ async function carregarRoupas() {
 
         const lista = document.getElementById("listaRoupas");
 
-        lista.innerHTML = ""; // Limpa antes de renderizar
+        lista.innerHTML = ""; 
 
-        // Cria um grid para os cards
         const grid = document.createElement("div");
         grid.classList.add("prod-grid");
 
