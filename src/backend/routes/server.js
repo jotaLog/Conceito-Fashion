@@ -7,10 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* ===============================
-   ROTAS DE USUÁRIO (CADASTRO e LOGIN)
-   =============================== */
-
 app.post('/usuarios', (req, res) => {
     const { user_name, email, cpf, senha } = req.body;
 
@@ -72,10 +68,6 @@ app.post('/login', (req, res) => {
 });
 
 
-/* ===============================
-   ROTAS CATEGORIAS
-   =============================== */
-
 app.post('/categorias', (req, res) => {
     const { name_category } = req.body;
     db.query('INSERT INTO categorias (name_category) VALUES (?)', [name_category], (err, result) => {
@@ -92,10 +84,6 @@ app.get('/categorias', (req, res) => {
 });
 
 
-/* ===============================
-   ROTAS ROUPAS
-   =============================== */
-
 app.post('/roupas', (req, res) => {
     const { name_roupa, preco_roupa, estoque, foreign_id_categoria } = req.body;
     db.query(
@@ -108,7 +96,6 @@ app.post('/roupas', (req, res) => {
     );
 });
 
-// LISTAR TODAS AS ROUPAS (INDEX)
 app.get('/roupas', (req, res) => {
     db.query('SELECT * FROM roupas', (err, results) => {
         if (err) return res.status(500).json({ erro: err });
@@ -116,7 +103,6 @@ app.get('/roupas', (req, res) => {
     });
 });
 
-// LISTAR UMA ROUPA ESPECÍFICA
 app.get('/roupas/:id', (req, res) => {
     const { id } = req.params;
     db.query('SELECT * FROM roupas WHERE id_roupa = ?', [id], (err, result) => {
@@ -126,7 +112,6 @@ app.get('/roupas/:id', (req, res) => {
     });
 });
 
-// LISTAR ROUPAS POR CATEGORIA
 app.get('/categorias/:id/roupas', (req, res) => {
     const { id } = req.params;
     db.query(
@@ -139,10 +124,6 @@ app.get('/categorias/:id/roupas', (req, res) => {
     );
 });
 
-
-/* ===============================
-   ROTAS DO CARRINHO POR USUÁRIO
-   =============================== */
 
 app.post('/carrinho/:id_user', (req, res) => {
     const { id_user } = req.params;
@@ -196,7 +177,4 @@ app.delete('/carrinho/:id_user/:id_roupa', (req, res) => {
 });
 
 
-/* ===============================
-   CONFIGURAÇÃO DO SERVIDOR
-   =============================== */
 app.listen(3000, () => console.log('Servidor rodando na porta 3000'));
